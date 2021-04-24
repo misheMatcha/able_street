@@ -7,7 +7,9 @@
 		"prettier": "^2.2.1"
 	},
 	"scripts": {
-		"server": "npm run start --prefix server/"
+		"server": "npm run server --prefix server",
+		"client": "npm run client --prefix server",
+		"dev": "npm run dev --prefix server"
 	},
 	"repository": {
 		"type": "git",
