@@ -2,6 +2,8 @@ import express from 'express'
 import mongoose from 'mongoose'
 import { mongoDB } from '../config/keys'
 
+import users from './routes/api/users'
+
 const app = express()
 
 mongoose
@@ -10,6 +12,8 @@ mongoose
 	.catch(err => console.log(err))
 
 app.get('/', (req, res) => res.send('Hello World'))
+
+app.use('/api/users', users)
 
 const PORT = process.env.PORT || 5000
 
