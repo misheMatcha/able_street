@@ -2,7 +2,9 @@ import { createUseStyles } from 'react-jss'
 import React from 'react'
 
 const useStyles = createUseStyles({
-	container: {}
+	container: {
+		height: '100%'
+	}
 })
 
 const App = () => {
