@@ -1,0 +1,23 @@
+{
+	"name": "able_street",
+	"version": "1.0.0",
+	"description": "For players and creators to share their designs",
+	"main": "server/app.js",
+	"devDependencies": {
+		"prettier": "^2.2.1"
+	},
+	"scripts": {
+		"server": "npm run start --prefix server/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/misheMatcha/able_street.git"
+	},
+	"keywords": [],
+	"author": "Michelle Vong, Rowena Lam, Vikkie Hoang",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/misheMatcha/able_street/issues"
+	},
+	"homepage": "https://github.com/misheMatcha/able_street#readme"
+}
