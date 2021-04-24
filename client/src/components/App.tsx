@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss'
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { addUser, fetchUsers } from '../utils/user_api'
+import Landing from './Landing'
 
 const useStyles = createUseStyles({
 	container: {
@@ -38,7 +39,7 @@ const App = () => {
 		})
 	}
 
-	return (
+	const renderUserTest = () => (
 		<div className={classes.container}>
 			<div>App</div>
 			{renderUsers()}
@@ -53,6 +54,16 @@ const App = () => {
 			</div>
 		</div>
 	)
+
+	// TODO: rename later
+	const renderElse = () => (
+		<div className={classes.container}>
+			<Landing />
+		</div>
+	)
+
+	// to keep test but remove compile warnings
+	return true ? renderElse() : renderUserTest()
 }
 
 export default App
