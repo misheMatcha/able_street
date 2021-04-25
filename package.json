@@ -4,12 +4,17 @@
 	"description": "For players and creators to share their designs",
 	"main": "server/app.js",
 	"devDependencies": {
+		"@babel/cli": "^7.13.16",
+		"@babel/core": "^7.13.16",
+		"@babel/preset-env": "^7.13.15",
+		"@babel/node": "^7.13.13",
 		"prettier": "^2.2.1"
 	},
 	"scripts": {
-		"server": "npm run server --prefix server",
+		"start": "npm run server --prefix server",
 		"client": "npm run client --prefix server",
-		"dev": "npm run dev --prefix server"
+		"dev": "npm run dev --prefix server",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
 	},
 	"repository": {
 		"type": "git",
