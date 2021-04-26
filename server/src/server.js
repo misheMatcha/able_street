@@ -15,6 +15,9 @@ mongoose
 	.then(() => console.log('Connected to MongoDB successfully'))
 	.catch(err => console.log(err))
 
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+
 app.get('/', (req, res) => res.send('Hello World'))
 app.use('/api/users', users)
 
