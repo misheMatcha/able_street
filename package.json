@@ -13,10 +13,13 @@
 		"url": "git+https://github.com/misheMatcha/able_street.git"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Michelle Vong, Rowena Lam, Vikkie Hoang",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/misheMatcha/able_street/issues"
 	},
-	"homepage": "https://github.com/misheMatcha/able_street#readme"
+	"homepage": "https://https://able-street.herokuapp.com/",
+	"devDependencies": {
+		"prettier": "^2.2.1"
+	}
 }
