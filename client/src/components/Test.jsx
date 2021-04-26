@@ -6,14 +6,14 @@ const Test = () => {
 	const [username, setUsername] = useState('')
 
 	useEffect(() => {
-		if (users)
-			fetchUsers()
-				.then(userlist => setUsers(userlist.data))
-				.catch(err => console.log('from fetchusers', err))
+		// if (users)
+		// 	fetchUsers()
+		// 		.then(userlist => setUsers(userlist.data))
+		// 		.catch(err => console.log('from fetchusers', err))
 	}, [users])
 
 	const renderUsers = () => {
-		if (users) {
+		if (users.length > 0) {
 			return users.map((user, i) => <div key={i}>{user.username}</div>)
 		} else {
 			return <div>no users</div>
