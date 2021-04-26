@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv').config()
+const path = require('path')
 
 const users = require('./routes/api/users')
 
@@ -18,7 +19,12 @@ mongoose
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
-app.get('/', (req, res) => res.send('Hello World'))
+app.use(express.static(__dirname, +'../../client/build/'))
+app.get('*', (req, res) =>
+	res.sendFile(path.join(__dirname + '../../client/build/index.html'))
+)
+
+// app.get('/', (req, res) => res.send('Hello World'))
 app.use('/api/users', users)
 
 const port = process.env.PORT || 5000
