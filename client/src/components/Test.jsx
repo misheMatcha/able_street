@@ -6,10 +6,10 @@ const Test = () => {
 	const [username, setUsername] = useState('')
 
 	useEffect(() => {
-		// if (users)
-		// 	fetchUsers()
-		// 		.then(userlist => setUsers(userlist.data))
-		// 		.catch(err => console.log('from fetchusers', err))
+		if (users)
+			fetchUsers()
+				.then(userlist => setUsers(userlist.data))
+				.catch(err => console.log('from fetchusers', err))
 	}, [users])
 
 	const renderUsers = () => {
