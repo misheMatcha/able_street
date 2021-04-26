@@ -3,10 +3,10 @@
 	"version": "1.0.0",
 	"description": "A place for animal crossing creators and players to share their patterns",
 	"scripts": {
-		"start": "npm run start --prefix client",
-		"server": "npm run dev --prefix server",
-		"client": "cd client && npm run start",
-		"build": "cd client && npm run build",
+		"start": "npm run start --prefix server",
+		"server": "npm run server --prefix server",
+		"client": "npm run start --prefix client",
+		"dev": "npm run dev --prefix server",
 		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run build"
 	},
 	"repository": {
