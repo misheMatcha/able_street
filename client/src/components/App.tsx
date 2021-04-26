@@ -63,7 +63,7 @@ const App = () => {
 	)
 
 	// to keep test but remove compile warnings
-	return true ? renderElse() : renderUserTest()
+	return false ? renderElse() : renderUserTest()
 }
 
 export default App
