@@ -9,12 +9,12 @@ const Test = () => {
 		if (users)
 			fetchUsers()
 				.then(userlist => setUsers(userlist.data))
-				.catch(err => console.log(err))
+				.catch(err => console.log('from fetchusers', err))
 	}, [users])
 
 	const renderUsers = () => {
-		if (users.length > 0) {
-			return users.map(({ username }, i) => <div key={i}>{username}</div>)
+		if (users) {
+			return users.map((user, i) => <div key={i}>{user.username}</div>)
 		} else {
 			return <div>no users</div>
 		}
