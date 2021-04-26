@@ -22,5 +22,10 @@
 	"homepage": "https://https://able-street.herokuapp.com/",
 	"devDependencies": {
 		"prettier": "^2.2.1"
+	},
+	"dependencies": {
+		"express": "^4.17.1",
+		"mongoose": "^5.12.5",
+		"nodemon": "^2.0.7"
 	}
 }
