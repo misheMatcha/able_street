@@ -13,7 +13,11 @@ const Test = () => {
 	}, [users])
 
 	const renderUsers = () => {
-		return users.map(({ username }, i) => <div key={i}>{username}</div>)
+		if (users.length > 0) {
+			return users.map(({ username }, i) => <div key={i}>{username}</div>)
+		} else {
+			return <div>no users</div>
+		}
 	}
 
 	const handleInput = e => {
