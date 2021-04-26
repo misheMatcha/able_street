@@ -1,0 +1,21 @@
+{
+	"name": "able_street",
+	"version": "1.0.0",
+	"description": "A place for animal crossing creators and players to share their patterns",
+	"scripts": {
+		"client": "cd client && npm run start",
+		"build": "cd client && npm run build",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/misheMatcha/able_street.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/misheMatcha/able_street/issues"
+	},
+	"homepage": "https://github.com/misheMatcha/able_street#readme"
+}
