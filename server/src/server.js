@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import { MONGODB_URI } from '../config/keys'
+import path from 'path'
 
 import users from './routes/api/users'
 
@@ -10,6 +11,15 @@ mongoose
 	.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then(() => console.log('Successfully connected to MongoDB'))
 	.catch(err => console.log(err))
+
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static(__dirname + 'client/build'))
+	app.get('/*', function (req, res) {
+		res.sendFile(
+			path.resolve(__dirname, '../../client/build', 'index.html')
+		)
+	})
+}
 
 // Express 4.16+ deprecated bodyParser, use express
 app.use(express.urlencoded({ extended: false }))

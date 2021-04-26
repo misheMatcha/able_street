@@ -3,7 +3,9 @@
 	"version": "1.0.0",
 	"description": "Backend thingys",
 	"main": "app.js",
+	"homepage": ".",
 	"scripts": {
+		"start": "nodemon ../node_modules/.bin/babel-node app.js",
 		"server": "nodemon --exec ../node_modules/.bin/babel-node app.js",
 		"client-install": "npm install --prefix ../client",
 		"client": "npm start --prefix ../client",
