@@ -19,9 +19,9 @@ mongoose
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
-app.use(express.static(__dirname, +'../../client/build/'))
+app.use(express.static('../../client/build/'))
 app.get('*', (req, res) =>
-	res.sendFile(path.join(__dirname + '../../client/build/index.html'))
+	res.sendFile(path.join('../../client/build/index.html'))
 )
 
 // app.get('/', (req, res) => res.send('Hello World'))
