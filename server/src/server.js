@@ -19,12 +19,14 @@ mongoose
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
-app.use(express.static(path.resolve(__dirname, '../../client/build/')))
-app.get('*', (req, res) =>
-	res.sendFile(path.resolve(__dirname, '../../client/build/index.html'))
-)
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static(path.resolve(__dirname, '../../client/build/')))
+	app.get('*', (req, res) =>
+		res.sendFile(path.resolve(__dirname, '../../client/build/index.html'))
+	)
+}
 
-// app.get('/', (req, res) => res.send('Hello World'))
+app.get('/', (req, res) => res.send('Hello World'))
 app.use('/api/users', users)
 
 const port = process.env.PORT || 5000
