@@ -1,22 +1,23 @@
+import React from 'react'
 import { createUseStyles } from 'react-jss'
-import Landing from './Landing.jsx'
-// import Test from './Test.jsx'
 
 const useStyles = createUseStyles({
 	container: {
-		height: '100%'
+		alignItems: 'center',
+		display: 'flex',
+		height: '100%',
+		justifyContent: 'center'
 	}
 })
 
-function App() {
+const Landing = () => {
 	const classes = useStyles()
 
 	return (
 		<div className={classes.container}>
-			{/* <Test /> */}
-			<Landing />
+			<div>COMING SOON</div>
 		</div>
 	)
 }
 
-export default App
+export default Landing
