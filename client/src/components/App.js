@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss'
-import Landing from './Landing.jsx'
-// import Test from './Test.jsx'
+import TempLanding from './TempLanding.jsx'
+// import Landing from './Landing.jsx'
 
 const useStyles = createUseStyles({
 	container: {
@@ -13,8 +13,8 @@ function App() {
 
 	return (
 		<div className={classes.container}>
-			{/* <Test /> */}
-			<Landing />
+			<TempLanding />
+			{/* <Landing /> */}
 		</div>
 	)
 }

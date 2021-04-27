@@ -1,7 +1,23 @@
 import React, { useEffect, useState } from 'react'
+import { createUseStyles } from 'react-jss'
 import { addUser, fetchUsers } from '../utils/userApi'
 
-const Test = () => {
+const useStyles = createUseStyles({
+	container: {
+		alignItems: 'center',
+		display: 'flex',
+		flexDirection: 'column-reverse',
+		height: '100%',
+		justifyContent: 'flex-end'
+	},
+	visitors: {
+		paddingTop: 50
+	},
+	inputs: {}
+})
+
+const TempLanding = () => {
+	const classes = useStyles()
 	const [users, setUsers] = useState([])
 	const [username, setUsername] = useState('')
 
@@ -31,9 +47,13 @@ const Test = () => {
 	}
 
 	return (
-		<div>
-			{renderUsers()}
-			<div>
+		<div className={classes.container}>
+			<div className={classes.visitors}>
+				<div>Whose Visited</div>
+				<div>{renderUsers()}</div>
+			</div>
+			<div className={classes.inputs}>
+				<div>Add your name</div>
 				<input
 					type='text'
 					placeholder='Username'
@@ -46,4 +66,4 @@ const Test = () => {
 	)
 }
 
-export default Test
+export default TempLanding
